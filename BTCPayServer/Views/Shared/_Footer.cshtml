@@ -3,13 +3,6 @@
 <footer class="btcpay-footer d-print-none">
     <div class="d-flex flex-wrap flex-column justify-content-between flex-xl-row gap-3">
         <div class="d-flex flex-wrap justify-content-center justify-content-xl-start gap-4">
-            @if (!string.IsNullOrEmpty(_env.OnionUrl) && !Context.Request.IsOnion())
-            {
-                <button type="button" class="d-flex align-items-center btn btn-link clipboard-button clipboard-button-hover" data-clipboard="@_env.OnionUrl" data-clipboard-hover>
-                    <vc:icon symbol="logo-tor"/>
-                    <span text-translate="true">Copy Tor URL</span>
-                </button>
-            }
         </div>
     </div>
 </footer>
