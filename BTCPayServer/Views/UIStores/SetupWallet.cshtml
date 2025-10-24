@@ -30,15 +30,35 @@
 <div class="mt-5">
 	<h3 class="my-4" text-translate="true">I don't have a wallet</h3>
     <div class="list-group">
-        <a asp-controller="UIStores" asp-action="GenerateWallet" asp-route-storeId="@Model.StoreId" asp-route-cryptoCode="@Model.CryptoCode" id="GenerateWalletLink" class="list-group-item list-group-item-action">
+        <a href="#" id="GenerateWalletLink" class="list-group-item list-group-item-action">
             <div class="image">
                 <vc:icon symbol="wallet-new"/>
             </div>
             <div class="content">
-				<h4 text-translate="true">Create a new wallet</h4>
-				<p class="mb-0 text-secondary" text-translate="true">Generate a brand-new wallet to use</p>
+				<h4 text-translate="true">@StringLocalizer["Create a new {0} Wallet", Model.CryptoCode]</h4>
+				<p class="mb-0 text-secondary" text-translate="true">See our recommendations for creating a new wallet.</p>
             </div>
             <vc:icon symbol="caret-right"/>
         </a>
     </div>
 </div>
+<script type="text/javascript">
+    function GetClientPlatform() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/android/i.test(userAgent)) return 'android';
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return 'ios';
+        if (/Win/.test(userAgent)) return 'windows';
+        if (/Mac/i.test(userAgent)) return 'mac';
+        if (/Linux/.test(userAgent)) return 'linux';
+        return '';
+    }
+    const platform = GetClientPlatform();
+    const cryptocode = "@Model.CryptoCode";
+
+    if (cryptocode.toUpperCase() == "BTC") {
+        document.getElementById("GenerateWalletLink").href = `https://bitcoin.org/en/choose-your-wallet?step=5&platform=${platform}`;
+    }
+    else if (cryptoCode.toUpperCase() == "XMR") {
+        document.getElementById("GenerateWalletLink").href = "https://www.getmonero.org/downloads/#mobilelight:~:text=Remote%20synchronization%20(lightweight)";
+    }
+</script>

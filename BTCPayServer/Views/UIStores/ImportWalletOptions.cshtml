@@ -57,7 +57,7 @@
 
 @if (BTCPayNetworkProvider.GetNetwork<BTCPayNetwork>(Model.CryptoCode).VaultSupported)
 {
-    <div class="mt-5">
+    <div class="mt-4">
         <div class="list-group">
 			<a asp-controller="UIStores" asp-action="ImportWallet" asp-route-storeId="@Model.StoreId" asp-route-cryptoCode="@Model.CryptoCode" asp-route-method="Hardware" id="ImportHardwareLink" class="list-group-item list-group-item-action only-for-js">
                 <div class="image">
@@ -68,7 +68,6 @@
 						<h4 text-translate="true">Connect hardware wallet</h4>
 						<p class="mb-0 text-secondary" text-translate="true">Import public keys using the open-source BTCPay Vault application</p>
                     </div>
-					<small class="d-block text-primary mt-2 mt-lg-0" text-translate="true">Recommended</small>
                 </div>
                 <vc:icon symbol="caret-right" />
             </a>
@@ -97,7 +96,7 @@
         </div>
         <div class="content">
 			<h4 text-translate="true">Scan wallet QR code</h4>
-			<p class="mb-0 text-secondary" text-translate="true">Supported by BlueWallet, Cobo Vault, Passport and Specter DIY</p>
+			<p class="mb-0 text-secondary" text-translate="true">Supported by BlueWallet, Cobo Vault, Passport, & Specter DIY</p>
         </div>
         <vc:icon symbol="caret-right" />
     </a>
