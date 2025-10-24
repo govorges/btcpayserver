@@ -176,6 +176,10 @@ a.unobtrusive-link {
 }
 
 /* Info icons in main headline */
+.icon-info {
+    display: none !important;
+}
+
 .icon.icon-info {
     position: relative;
     top: -.05em;
