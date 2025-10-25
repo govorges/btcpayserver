@@ -6,10 +6,10 @@
   --btcpay-transition-duration-fast: .2s;
   --btcpay-transition-duration-default: .3s;
   --btcpay-transition-duration-slow: .5s;
-  --btcpay-brand-primary: #51b13e;
+  --btcpay-brand-primary: rgb(255, 0, 0);
   --btcpay-brand-secondary: #CEDC21;
   --btcpay-brand-tertiary: #1e7a44;
-  --btcpay-brand-dark: #0F3B21;
+  --btcpay-brand-dark: #9c0000;
   --btcpay-white: #ffffff;
   --btcpay-white-rgb: 255, 255, 255;
   --btcpay-black: #000000;
