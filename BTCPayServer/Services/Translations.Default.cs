@@ -1301,7 +1301,7 @@ namespace BTCPayServer.Services
   "selected": "",
   "Send": "",
   "Send {0}": "",
-  "Send a <code>GET</code> request to <code>https://btcpay.example.com/invoices/{invoiceId}</code> with <code>Content-Type: application/json; Authorization: Basic YourLegacyAPIkey\"</code>, Legacy API key can be created with Access Tokens in Store settings": "",
+  "Send a <code>GET</code> request to <code>https://pay.xbilling.net/invoices/{invoiceId}</code> with <code>Content-Type: application/json; Authorization: Basic YourLegacyAPIkey\"</code>, Legacy API key can be created with Access Tokens in Store settings": "",
   "Send a test event to a webhook endpoint": "",
   "Send invitation email": "",
   "Send me everything": "",
